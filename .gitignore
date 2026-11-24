@@ -1,0 +1,45 @@
+# Secrets / local env
+.env
+
+# Virtual environments
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Local databases and backups
+*.db
+*.db-*
+*.db.*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.bak
+
+# Build / dist
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+*.temp
+tmp/
+temp/

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdRobot — редактор кампании</title>
+    <link rel="stylesheet" href="/static/css/app.css?v=15" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1 id="campaign-title">Кампания</h1>
+          <p id="campaign-sub">Загрузка…</p>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <a class="btn btn-ghost btn-sm" href="/">← К списку</a>
+        <div class="btn-row" style="margin: 0">
+          <a
+            id="open-kt-btn"
+            class="btn btn-secondary"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            >OPEN IN KEITARO</a
+          >
+          <button type="button" id="fetch-btn" class="btn btn-secondary">FETCH STREAMS FROM KT</button>
+          <button type="button" id="delete-campaign-btn" class="btn btn-danger">Удалить</button>
+        </div>
+      </div>
+
+      <div id="streams" class="list" style="gap: 16px">
+        <div class="empty">Загрузка потоков…</div>
+      </div>
+
+      <details class="card logs-panel" style="margin-top: 20px">
+        <summary class="logs-summary">Журнал синхронизаций</summary>
+        <div id="sync-logs" class="logs-body">
+          <div class="empty">Загрузка…</div>
+        </div>
+      </details>
+    </div>
+
+    <script src="/static/js/common.js?v=13"></script>
+    <script src="/static/js/campaign.js?v=15"></script>
+  </body>
+</html>

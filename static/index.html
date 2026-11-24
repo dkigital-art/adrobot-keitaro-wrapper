@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdRobot — создатель кампаний</title>
+    <link rel="stylesheet" href="/static/css/app.css?v=15" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1>AdRobot</h1>
+          <p>Обёртка над Keitaro · создатель и редактор кампаний</p>
+        </div>
+      </header>
+
+      <div class="grid-2">
+        <section class="card">
+          <h2>Создать кампанию</h2>
+          <form id="create-form">
+            <label for="name">Name</label>
+            <input id="name" type="text" required placeholder="Например: MX Test Campaign" />
+
+            <label for="geo">Geo</label>
+            <input id="geo" type="text" required placeholder="MX,AU,RO" />
+
+            <label for="offer-input">Offer</label>
+            <div class="autocomplete">
+              <input
+                id="offer-input"
+                type="search"
+                required
+                placeholder="Начните вводить название или ID…"
+                autocomplete="off"
+              />
+              <div id="offer-menu" class="ac-menu" hidden></div>
+            </div>
+
+            <div class="btn-row">
+              <button type="submit" class="btn btn-primary">Создать в Keitaro</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="stream-head" style="margin-bottom: 14px">
+            <h2 style="margin: 0">Мои кампании</h2>
+            <button type="button" id="sync-kt-btn" class="btn btn-secondary btn-sm">
+              FETCH FROM KT
+            </button>
+          </div>
+          <p class="hint" style="margin-top: 0; margin-bottom: 12px">
+            Подтягивает кампании, созданные напрямую в Keitaro, в локальный список.
+          </p>
+          <div id="campaigns-list" class="list">
+            <div class="empty">Загрузка…</div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/static/js/common.js?v=13"></script>
+    <script src="/static/js/index.js?v=14"></script>
+  </body>
+</html>
