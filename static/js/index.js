@@ -17,25 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(
         (c) => `
       <div class="list-item" data-campaign-id="${c.id}">
-        <div>
-          <h3>${escapeHtml(c.name)}</h3>
+        <h3>${escapeHtml(c.name)}</h3>
+        <div class="list-item-body">
           <div class="meta">
             local #${c.id} · KT #${c.keitaro_campaign_id} · geo ${escapeHtml(c.geo)}
             ${c.has_draft ? ' · <span class="draft-badge">draft</span>' : ""}
           </div>
-        </div>
-        <div class="list-item-actions">
-          <a class="btn btn-sm btn-primary" href="/campaigns/${c.id}">Открыть</a>
-          <button
-            type="button"
-            class="icon-btn icon-btn-danger"
-            data-action="delete-campaign"
-            data-id="${c.id}"
-            data-name="${escapeHtml(c.name)}"
-            data-kt-id="${c.keitaro_campaign_id}"
-            title="Удалить кампанию"
-            aria-label="Удалить кампанию «${escapeHtml(c.name)}»"
-          >×</button>
+          <div class="list-item-actions">
+            <a class="btn btn-sm btn-primary" href="/campaigns/${c.id}">Открыть</a>
+            <button
+              type="button"
+              class="icon-btn icon-btn-danger"
+              data-action="delete-campaign"
+              data-id="${c.id}"
+              data-name="${escapeHtml(c.name)}"
+              data-kt-id="${c.keitaro_campaign_id}"
+              title="Удалить кампанию"
+              aria-label="Удалить кампанию «${escapeHtml(c.name)}»"
+            >×</button>
+          </div>
         </div>
       </div>`
       )

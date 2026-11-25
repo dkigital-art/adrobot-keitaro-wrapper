@@ -294,9 +294,8 @@ button.btn:disabled,
 
 .list-item {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   padding: 12px 14px;
   border-radius: 12px;
   background: var(--bg-elevated);
@@ -304,25 +303,31 @@ button.btn:disabled,
   min-width: 0;
 }
 
-.list-item > div:first-child {
-  min-width: 0;
-  overflow: hidden;
-}
-
 .list-item h3 {
   margin: 0;
   font-size: 0.98rem;
   list-style: none;
+  white-space: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.list-item-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
 }
 
 .list-item .meta {
   color: var(--muted);
   font-size: 0.8rem;
-  margin-top: 3px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
+  min-width: 0;
 }
 
 .list-item-actions {
